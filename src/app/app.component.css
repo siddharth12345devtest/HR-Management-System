@@ -1,13 +1,13 @@
 /* Base layout background - dark */
 .sidenav-container {
   height: 100vh;
-  background-color: darkmagenta; /* slightly lighter than pure black */
+  background-color: white; /* slightly lighter than pure black */
 }
 
 /* Sidebar */
 .sidenav {
   width: 250px;
-  background-color: darkcyan;
+  background-color: darkgrey;
   color: #e0e0e0;
   transition: width 0.3s ease;
   overflow-x: hidden;
@@ -35,11 +35,11 @@
 
 /* Sidebar links */
 .mat-nav-list a.mat-list-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 12px 20px;
-  color: #e0e0e0;
+  /* display: flex; */
+  /* align-items: center; */
+  /* gap: 16px; */
+  /* padding: 12px 20px; */
+  /* color: #e0e0e0; */
 }
 
 .mat-nav-list a:hover {
@@ -54,8 +54,8 @@
 
 /* Toolbar - slightly lighter than sidebar for contrast */
 .mat-toolbar {
-  background-color: darkmagenta;
-  color: #ffffff;
+  background-color: white;
+  color: black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -87,11 +87,12 @@
 }
 
 .menu-icon {
-  font-size: 24px;        /* Icon size */
+  font-size: 30px;        /* Icon size */
   line-height: 1;         /* Align icon baseline */
 }
 
 .menu-text {
   font-size: 20px;        /* Text size */
-  line-height: 1;         /* Align text baseline */
+  line-height: 1; 
+  margin-left: 3%;        /* Align text baseline */
 }
