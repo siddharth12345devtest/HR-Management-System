@@ -1,13 +1,13 @@
 /* Base layout background - dark */
 .sidenav-container {
   height: 100vh;
-  background-color: darkmagenta; /* slightly lighter than pure black */
+  background-color: white; /* slightly lighter than pure black */
 }
 
 /* Sidebar */
 .sidenav {
   width: 250px;
-  background-color: darkcyan;
+  background-color: darkgrey;
   color: #e0e0e0;
   transition: width 0.3s ease;
   overflow-x: hidden;
@@ -54,8 +54,8 @@
 
 /* Toolbar - slightly lighter than sidebar for contrast */
 .mat-toolbar {
-  background-color: darkmagenta;
-  color: #ffffff;
+  background-color: white;
+  color: black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
