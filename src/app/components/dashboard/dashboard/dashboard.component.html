@@ -1,1 +1,149 @@
-<p>dashboard works!</p>
+
+  <div class="container-fluid p-4">
+    <!-- Breadcrumb & Header -->
+    <div class="mb-3">
+      <h4>Admin Dashboard</h4>
+      <nav>
+        <ol class="breadcrumb small">
+          <li class="breadcrumb-item">Dashboard</li>
+          <li class="breadcrumb-item active">Admin Dashboard</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Welcome -->
+    <div class="bg-white rounded shadow-sm p-3 mb-4 d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="avatar-img" alt="admin">
+        <div>
+          <h6 class="mb-0">Welcome Back, <strong>Adrian</strong></h6>
+          <small>You have <span class="text-danger">21</span> Pending Approvals & <span class="text-warning">14</span> Leave Requests</small>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-primary me-2">Add Project</button>
+        <button class="btn btn-warning text-white">Add Requests</button>
+      </div>
+    </div>
+
+    <!-- Stats & Chart -->
+    <div class="row g-3">
+      <div class="col-md-2">
+        <div class="card card-stats p-3 shadow-sm">
+          <div class="d-flex align-items-center gap-3">
+            <div class="card-icon icon-orange"><i class="bi bi-clock"></i></div>
+            <div>
+              <small class="text-muted">Attendance Overview</small>
+              <h6>120/154 <span class="text-success small">+2.1%</span></h6>
+              <a href="#" class="small text-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="card card-stats p-3 shadow-sm">
+          <div class="d-flex align-items-center gap-3">
+            <div class="card-icon icon-primary"><i class="bi bi-briefcase"></i></div>
+            <div>
+              <small>Total No of Projects</small>
+              <h6>90/125 <span class="text-danger small">-2.1%</span></h6>
+              <a href="#" class="small text-primary">View All</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="card card-stats p-3 shadow-sm">
+          <div class="d-flex align-items-center gap-3">
+            <div class="card-icon icon-primary"><i class="bi bi-people"></i></div>
+            <div>
+              <small>Total No of Clients</small>
+              <h6>69/86 <span class="text-danger small">-11.2%</span></h6>
+              <a href="#" class="small text-primary">View All</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="card card-stats p-3 shadow-sm">
+          <div class="d-flex align-items-center gap-3">
+            <div class="card-icon icon-pink"><i class="bi bi-check2-circle"></i></div>
+            <div>
+              <small>Total No of Tasks</small>
+              <h6>225/228 <span class="text-success small">+11.2%</span></h6>
+              <a href="#" class="small text-primary">View All</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="card card-stats p-3 shadow-sm">
+          <div class="d-flex align-items-center gap-3">
+            <div class="card-icon icon-purple"><i class="bi bi-currency-dollar"></i></div>
+            <div>
+              <small>Earnings</small>
+              <h6>$21,445 <span class="text-success small">+10.2%</span></h6>
+              <a href="#" class="small text-primary">View All</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="card card-stats p-3 shadow-sm">
+          <div class="d-flex align-items-center gap-3">
+            <div class="card-icon icon-danger"><i class="bi bi-cash-stack"></i></div>
+            <div>
+              <small>Profit This Week</small>
+              <h6>$5,544 <span class="text-success small">+2.1%</span></h6>
+              <a href="#" class="small text-primary">View All</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Row -->
+    <div class="row g-3 mt-2">
+      <div class="col-md-2">
+        <div class="card card-stats p-3 shadow-sm">
+          <div class="d-flex align-items-center gap-3">
+            <div class="card-icon icon-green"><i class="bi bi-person-lines-fill"></i></div>
+            <div>
+              <small>Job Applicants</small>
+              <h6>98 <span class="text-success small">+2.1%</span></h6>
+              <a href="#" class="small text-primary">View All</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card card-stats p-3 shadow-sm">
+          <div class="d-flex align-items-center gap-3">
+            <div class="card-icon icon-dark"><i class="bi bi-person-plus-fill"></i></div>
+            <div>
+              <small>New Hire</small>
+              <h6>45/48 <span class="text-danger small">-11.2%</span></h6>
+              <a href="#" class="small text-primary">View All</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card p-3 shadow-sm">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h6>Employees By Department</h6>
+            <button class="btn btn-light btn-sm">This Week</button>
+          </div>
+          <canvas id="deptChart" height="180"></canvas>
+          <p class="text-small mt-2 text-muted">
+            <span class="text-warning">●</span> No of Employees increased by <span class="text-success fw-bold">+20%</span> from last week
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,56 @@
+
+    .card-metric {
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    }
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #27ae60;
+    }
+    .timeline-bar {
+      height: 14px;
+      border-radius: 4px;
+    }
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+    }
+    .status-badge {
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .status-present {
+      background-color: #e6ffed;
+      color: #28a745;
+      border: 1px solid #28a745;
+    }
+    .status-absent {
+      background-color: #ffe6e6;
+      color: #dc3545;
+      border: 1px solid #dc3545;
+    }
+    .production-hours {
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: white;
+      display: inline-block;
+    }
+    .prod-green {
+      background-color: #28a745;
+    }
+    .prod-blue {
+      background-color: #007bff;
+    }
+    .table thead th {
+      font-size: 0.9rem;
+    }

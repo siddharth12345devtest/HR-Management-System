@@ -1,1 +1,189 @@
-<p>attendance works!</p>
+
+<div class="container py-4">
+  <h4 class="mb-3 fw-bold">Employee Attendance</h4>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb small">
+      <li class="breadcrumb-item"><a href="#">Employee</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Employee Attendance</li>
+    </ol>
+  </nav>
+
+  <div class="row g-4 mt-3">
+    <div class="col-md-3">
+      <div class="card card-metric text-center">
+        <p class="text-muted mb-1">Good Morning, Adrian</p>
+        <h5 class="mb-0 fw-bold">08:35 AM, 11 Mar 2025</h5>
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="avatar" class="avatar my-3" />
+        <span class="badge bg-danger mb-2">Production: 3.45 hrs</span>
+        <p class="text-muted small mb-2">Punch In at 10.00 AM</p>
+        <button class="btn btn-dark btn-sm w-100">Punch Out</button>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <div class="row g-3">
+        <div class="col-md-3">
+          <div class="card card-metric text-center">
+            <div class="text-orange fs-4 mb-2">🕓</div>
+            <h5>8.36 / 9</h5>
+            <p class="text-success small">⬆ 5% This Week</p>
+            <p class="small text-muted mb-0">Total Hours Today</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card card-metric text-center">
+            <div class="text-dark fs-4 mb-2">📅</div>
+            <h5>10 / 40</h5>
+            <p class="text-success small">⬆ 7% Last Week</p>
+            <p class="small text-muted mb-0">Total Hours Week</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card card-metric text-center">
+            <div class="text-primary fs-4 mb-2">📆</div>
+            <h5>75 / 98</h5>
+            <p class="text-danger small">⬇ 8% Last Month</p>
+            <p class="small text-muted mb-0">Total Hours Month</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card card-metric text-center">
+            <div class="text-pink fs-4 mb-2">⏱</div>
+            <h5>16 / 28</h5>
+            <p class="text-danger small">⬇ 6% Last Month</p>
+            <p class="small text-muted mb-0">Overtime this Month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Time Summary -->
+  <div class="card card-metric mt-4">
+    <div class="d-flex justify-content-between">
+      <div>
+        <h6>Total Working Hours: <strong>12h 36m</strong></h6>
+        <p class="mb-1">Productive Hours: <strong class="text-success">08h 36m</strong></p>
+        <p class="mb-1">Break Hours: <strong class="text-warning">22m 15s</strong></p>
+        <p class="mb-2">Overtime: <strong class="text-primary">02h 15m</strong></p>
+      </div>
+    </div>
+    <!-- Time Bar -->
+    <div class="row mt-3 g-1">
+      <div class="col"><div class="timeline-bar bg-success"></div></div>
+      <div class="col"><div class="timeline-bar bg-success"></div></div>
+      <div class="col"><div class="timeline-bar bg-warning"></div></div>
+      <div class="col"><div class="timeline-bar bg-success"></div></div>
+      <div class="col"><div class="timeline-bar bg-success"></div></div>
+      <div class="col"><div class="timeline-bar bg-success"></div></div>
+      <div class="col"><div class="timeline-bar bg-primary"></div></div>
+      <div class="col"><div class="timeline-bar bg-primary"></div></div>
+    </div>
+    <div class="d-flex justify-content-between mt-2 small text-muted">
+      <span>06:00</span><span>08:00</span><span>10:00</span><span>12:00</span><span>14:00</span><span>16:00</span><span>18:00</span><span>20:00</span>
+    </div>
+  </div>
+</div>
+
+  <div class="container mt-4">
+    <div class="card p-4">
+      <div class="d-flex flex-nowrap gap-2 mb-3">
+  <div class="flex-shrink-0">
+    <input type="date" class="form-control" value="2025-05-21">
+  </div>
+  <div class="flex-shrink-0">
+    <input type="date" class="form-control" value="2025-05-27">
+  </div>
+  <div class="flex-shrink-0">
+    <select class="form-select">
+      <option selected>Select Status</option>
+      <option>Present</option>
+      <option>Absent</option>
+    </select>
+  </div>
+  <div class="flex-shrink-0">
+    <select class="form-select">
+      <option selected>Sort By : Last 7 Days</option>
+      <option>Today</option>
+      <option>This Month</option>
+    </select>
+  </div>
+  <div class="flex-grow-1">
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+
+
+      <!-- Table -->
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle text-center">
+          <thead class="table-light">
+            <tr>
+              <th>Date</th>
+              <th>Check In</th>
+              <th>Status</th>
+              <th>Check Out</th>
+              <th>Break</th>
+              <th>Late</th>
+              <th>Overtime</th>
+              <th>Production Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>02 Sep 2024</td>
+              <td>09:00 AM</td>
+              <td><span class="status-badge status-present">● Present</span></td>
+              <td>09:17 PM</td>
+              <td>14 Min</td>
+              <td>12 Min</td>
+              <td>-</td>
+              <td><span class="production-hours prod-green">8.35 Hrs</span></td>
+            </tr>
+            <tr>
+              <td>06 Jul 2024</td>
+              <td>09:00 AM</td>
+              <td><span class="status-badge status-present">● Present</span></td>
+              <td>07:13 PM</td>
+              <td>32 Min</td>
+              <td>-</td>
+              <td>-</td>
+              <td><span class="production-hours prod-blue">9.15 Hrs</span></td>
+            </tr>
+            <tr>
+              <td>10 Dec 2024</td>
+              <td>09:00 AM</td>
+              <td><span class="status-badge status-absent">● Absent</span></td>
+              <td>09:23 PM</td>
+              <td>10 Min</td>
+              <td>-</td>
+              <td>45 Min</td>
+              <td><span class="production-hours prod-green">9.25 Hrs</span></td>
+            </tr>
+            <tr>
+              <td>12 Apr 2024</td>
+              <td>09:00 AM</td>
+              <td><span class="status-badge status-present">● Present</span></td>
+              <td>06:43 PM</td>
+              <td>23 Min</td>
+              <td>10 Min</td>
+              <td>10 Min</td>
+              <td><span class="production-hours prod-green">8.22 Hrs</span></td>
+            </tr>
+            <tr>
+              <td>14 Jan 2024</td>
+              <td>09:00 AM</td>
+              <td><span class="status-badge status-present">● Present</span></td>
+              <td>06:45 PM</td>
+              <td>30 Min</td>
+              <td>32 Min</td>
+              <td>20 Min</td>
+              <td><span class="production-hours prod-green">8.55 Hrs</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  

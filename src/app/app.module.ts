@@ -14,6 +14,7 @@ import { DepartmentComponent } from './components/department/department/departme
 import { DesignationsComponent } from './components/designations/designations/designations.component';
 import { EmployeeComponent } from './components/employee/employee/employee.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

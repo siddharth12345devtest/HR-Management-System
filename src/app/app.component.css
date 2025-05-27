@@ -61,7 +61,7 @@
 
 /* Main content - light on dark contrast */
 .content {
-  background-color: darkgrey;
+  background-color:white;
   color: #1a1a1a;
   padding: 24px;
   min-height: calc(100vh - 64px);
@@ -77,4 +77,21 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
   padding: 16px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;    /* Vertically center icon and text */
+  gap: 80px;               /* Horizontal spacing between icon and text */
+
+}
+
+.menu-icon {
+  font-size: 24px;        /* Icon size */
+  line-height: 1;         /* Align icon baseline */
+}
+
+.menu-text {
+  font-size: 20px;        /* Text size */
+  line-height: 1;         /* Align text baseline */
 }

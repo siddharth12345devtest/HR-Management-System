@@ -1,1 +1,90 @@
-<p>employee works!</p>
+<div class="employee-container">
+  <h2>Employee</h2>
+  <div class="breadcrumbs">Employee &gt; Employee List</div>
+
+  <div class="card-grid">
+    <div class="summary-card dark">
+      <h4>Total Employee</h4>
+      <p>1007</p>
+      <span class="percent">+19.01%</span>
+    </div>
+    <div class="summary-card green">
+      <h4>Active</h4>
+      <p>945</p>
+      <span class="percent">+17.65%</span>
+    </div>
+    <div class="summary-card red">
+      <h4>Inactive</h4>
+      <p>62</p>
+      <span class="percent">-3.21%</span>
+    </div>
+    <div class="summary-card blue">
+      <h4>New Joiners</h4>
+      <p>67</p>
+      <span class="percent">+5.12%</span>
+    </div>
+  </div>
+
+  <div class="filters">
+    <input type="date" />
+    <select>
+      <option disabled selected>Designation</option>
+      <option>Finance</option>
+      <option>Developer</option>
+      <option>HR</option>
+    </select>
+    <select>
+      <option>Status</option>
+      <option>Active</option>
+      <option>Inactive</option>
+    </select>
+    <input type="text" placeholder="Search employee..." />
+    <button>Add Employee</button>
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th><input type="checkbox" /></th>
+          <th>Emp ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Designation</th>
+          <th>Joining Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employees">
+          <td><input type="checkbox" /></td>
+          <td>{{ emp.id }}</td>
+          <td class="emp-profile">
+            <img [src]="emp.image" alt="emp" />
+            <div>
+              <strong>{{ emp.name }}</strong><br />
+              <small>{{ emp.role }}</small>
+            </div>
+          </td>
+          <td>{{ emp.email }}</td>
+          <td>{{ emp.phone }}</td>
+          <td>
+            <select>
+              <option>{{ emp.designation }}</option>
+            </select>
+          </td>
+          <td>{{ emp.joiningDate }}</td>
+          <td>
+            <span class="status" [ngClass]="emp.status.toLowerCase()">{{ emp.status }}</span>
+          </td>
+          <td>
+            <span class="edit">✏️</span>
+            <span class="delete">🗑️</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

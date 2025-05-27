@@ -1,0 +1,27 @@
+ .card-stats { min-height: 130px; }
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .icon-orange { background-color: #fd7e14; }
+    .icon-primary { background-color: #0d6efd; }
+    .icon-pink { background-color: #e83e8c; }
+    .icon-purple { background-color: #6f42c1; }
+    .icon-green { background-color: #198754; }
+    .icon-danger { background-color: #dc3545; }
+    .icon-dark { background-color: #212529; }
+    .avatar-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .small-label {
+      font-size: 14px;
+    }
+    .text-small { font-size: 12px; }
