@@ -13,6 +13,10 @@ import { AttendanceComponent } from './components/attendance/attendance/attendan
 import { DepartmentComponent } from './components/department/department/department.component';
 import { DesignationsComponent } from './components/designations/designations/designations.component';
 import { EmployeeComponent } from './components/employee/employee/employee.component';
+import { PayrollComponent } from './components/payroll/payroll/payroll.component';
+import { BroadcastComponent } from './components/broadcast/broadcast/broadcast.component';
+import { ClaimsComponent } from './components/claims/claims/claims.component';
+import { PerformanceAppraisalComponent } from './components/performance-appraisal/performance-appraisal/performance-appraisal.component';
 
 
 @NgModule({
@@ -23,6 +27,10 @@ import { EmployeeComponent } from './components/employee/employee/employee.compo
     DepartmentComponent,
     DesignationsComponent,
     EmployeeComponent,
+    PayrollComponent,
+    BroadcastComponent,
+    ClaimsComponent,
+    PerformanceAppraisalComponent,
   ],
   imports: [
     BrowserModule,
