@@ -35,11 +35,11 @@
 
 /* Sidebar links */
 .mat-nav-list a.mat-list-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 12px 20px;
-  color: #e0e0e0;
+  /* display: flex; */
+  /* align-items: center; */
+  /* gap: 16px; */
+  /* padding: 12px 20px; */
+  /* color: #e0e0e0; */
 }
 
 .mat-nav-list a:hover {
@@ -87,11 +87,12 @@
 }
 
 .menu-icon {
-  font-size: 24px;        /* Icon size */
+  font-size: 30px;        /* Icon size */
   line-height: 1;         /* Align icon baseline */
 }
 
 .menu-text {
   font-size: 20px;        /* Text size */
-  line-height: 1;         /* Align text baseline */
+  line-height: 1; 
+  margin-left: 3%;        /* Align text baseline */
 }
