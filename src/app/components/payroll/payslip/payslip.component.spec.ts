@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PayrollComponent } from './payroll.component';
+import { PayslipComponent } from './payslip.component';
 
-describe('PayrollComponent', () => {
-  let component: PayrollComponent;
-  let fixture: ComponentFixture<PayrollComponent>;
+describe('PayslipComponent', () => {
+  let component: PayslipComponent;
+  let fixture: ComponentFixture<PayslipComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PayrollComponent]
+      declarations: [PayslipComponent]
     });
-    fixture = TestBed.createComponent(PayrollComponent);
+    fixture = TestBed.createComponent(PayslipComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
