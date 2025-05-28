@@ -200,3 +200,92 @@
     </div>
   </div>
 </div>
+
+<div class="container-fluid p-4 bg-light">
+  <!-- Header -->
+  <div class="mb-3">
+    <h3 class="fw-bold">Employee Dashboard</h3>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">Dashboard</li>
+        <li class="breadcrumb-item active" aria-current="page">Employee Dashboard</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- Notification -->
+  <div class="alert alert-info py-2 text-center fw-semibold">
+    Your Leave Request on <strong>“24th April 2024”</strong> has been Approved!!!
+  </div>
+
+  <!-- Dashboard Layout -->
+  <div class="row g-3">
+    <!-- Left Profile Card -->
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <img src="https://via.placeholder.com/80" class="rounded-circle mb-2" alt="User">
+          <h5 class="card-title mb-0 fw-bold">Stephan Peralt</h5>
+          <p class="text-muted small">Senior Product Designer</p>
+          <span class="badge bg-danger mb-2">UI/UX Design</span>
+
+          <div class="text-start mt-3">
+            <p class="mb-1"><strong>Phone Number:</strong><br> +1 324 3453 545</p>
+            <p class="mb-1"><strong>Email Address:</strong><br> Steperde124@example.com</p>
+            <p class="mb-1"><strong>Report Office:</strong><br> Doglas Martini</p>
+            <p><strong>Joined on:</strong><br> 15 Jan 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Middle Leave Chart -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <strong>Leave Details</strong>
+          <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-calendar3"></i> 2024</button>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled">
+            <li>🟢 <strong>1254</strong> on time</li>
+            <li>🟩 <strong>32</strong> Late Attendance</li>
+            <li>🟠 <strong>658</strong> Work From Home</li>
+            <li>🔴 <strong>14</strong> Absent</li>
+            <li>🟡 <strong>68</strong> Sick Leave</li>
+          </ul>
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="https://quickchart.io/chart?c={type:'doughnut',data:{labels:['On Time','Late','WFH','Absent','Sick'],datasets:[{data:[1254,32,658,14,68]}]}}" alt="Chart" class="img-fluid" style="max-height: 200px;">
+          </div>
+          <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" id="check">
+            <label class="form-check-label" for="check">Better than 85% of Employees</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Leave Summary -->
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <strong>Leave Details</strong>
+          <div>
+            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-calendar3"></i> 2024</button>
+            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-gear"></i></button>
+          </div>
+        </div>
+        <div class="card-body">
+          <p><strong>Total Leaves:</strong> 16</p>
+          <p><strong>Taken:</strong> 10</p>
+          <p><strong>Absent:</strong> 2</p>
+          <p><strong>Request:</strong> 0</p>
+          <p><strong>Worked Days:</strong> 240</p>
+          <p><strong>Loss of Pay:</strong> 2</p>
+          <button class="btn btn-dark w-100 mt-3">Apply New Leave</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
