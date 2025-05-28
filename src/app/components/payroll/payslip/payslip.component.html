@@ -1,1 +1,95 @@
-<p>payslip works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payslip</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .payslip-header { border-bottom: 1px solid #dee2e6; margin-bottom: 1.5rem; padding-bottom: 1rem; }
+    .payslip-box { background: #f8f9fa; padding: 1rem; border-radius: 8px; }
+    .payslip-box h6 { font-weight: 600; }
+    .text-small { font-size: 0.9rem; }
+  </style>
+</head>
+<body class="p-4">
+
+  <!-- Header -->
+  <div class="d-flex justify-content-between align-items-center payslip-header">
+    <div>
+      <h4 class="mb-0">Payslip</h4>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">HR</li>
+          <li class="breadcrumb-item active" aria-current="page">Payslip</li>
+        </ol>
+      </nav>
+    </div>
+    <div>
+      <button class="btn btn-dark"><i class="bi bi-download me-1"></i>Download</button>
+    </div>
+  </div>
+
+  <!-- Company and Payslip Info -->
+  <div class="d-flex justify-content-between align-items-center">
+    <div>
+      <img src="https://via.placeholder.com/100x40?text=SmartHR" alt="SmartHR Logo">
+      <p class="mb-0 text-muted">3099 Kennedy Court Framingham, MA 01702</p>
+    </div>
+    <div class="text-end">
+      <p class="mb-0"><strong>Payslip No</strong> <span class="text-danger">#PS4283</span></p>
+      <p class="mb-0">Salary Month : <strong>October 2024</strong></p>
+    </div>
+  </div>
+
+  <hr class="my-4">
+
+  <!-- From / To -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <h6>From</h6>
+      <p class="mb-0"><strong>XYZ Technologies</strong></p>
+      <p class="mb-0">2077 Chicago Avenue Orosi, CA 93647</p>
+      <p class="mb-0">Email: xyztech@example.com</p>
+      <p class="mb-0">Phone: +1 987 654 3210</p>
+    </div>
+    <div class="col-md-6">
+      <h6>To</h6>
+      <p class="mb-0"><strong>Anthony Lewis</strong></p>
+      <p class="mb-0">Web Designer</p>
+      <p class="mb-0">Email: anthony@example.com</p>
+      <p class="mb-0">Phone: +1 458 268 4738</p>
+    </div>
+  </div>
+
+  <h6 class="text-center mb-4">Payslip for the month of October 2024</h6>
+
+  <!-- Earnings / Deductions -->
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="payslip-box">
+        <h6>Earnings</h6>
+        <div class="d-flex justify-content-between py-1"><span>Basic Salary</span><span>$3000</span></div>
+        <div class="d-flex justify-content-between py-1"><span>House Rent Allowance (H.R.A.)</span><span>$1000</span></div>
+        <div class="d-flex justify-content-between py-1"><span>Conveyance</span><span>$200</span></div>
+        <div class="d-flex justify-content-between py-1"><span>Other Allowance</span><span>$100</span></div>
+        <hr>
+        <div class="d-flex justify-content-between fw-bold py-1"><span>Total Earnings</span><span>$4300</span></div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="payslip-box">
+        <h6>Deductions</h6>
+        <div class="d-flex justify-content-between py-1"><span>Tax Deducted at Source (T.D.S.)</span><span>$200</span></div>
+        <div class="d-flex justify-content-between py-1"><span>Provident Fund</span><span>$300</span></div>
+        <div class="d-flex justify-content-between py-1"><span>ESI</span><span>$150</span></div>
+        <div class="d-flex justify-content-between py-1"><span>Loan</span><span>$50</span></div>
+        <hr>
+        <div class="d-flex justify-content-between fw-bold py-1"><span>Total Deductions</span><span>$700</span></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
