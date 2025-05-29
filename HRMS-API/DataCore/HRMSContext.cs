@@ -10,7 +10,7 @@ namespace DataCore
             : base(options)
         {
         }
-    public DbSet<Employee> Employees { get; set; }
+    public DbSet<Employee> ScEmployee { get; set; }
     public DbSet<Designation> Designations { get; set; }
     public DbSet<Department> Departments { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)

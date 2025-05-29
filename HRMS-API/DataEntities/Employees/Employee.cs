@@ -1,5 +1,6 @@
 using DataEntities.Departments;
 using DataEntities.Designations;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -8,70 +9,50 @@ namespace DataEntities.Employees
     public class Employee
     {
     [Key]
-    public int EmployeeId { get; set; }
-
-    [Required]
-    [MaxLength(100)]
-    public string FirstName { get; set; }
-
-    [MaxLength(100)]
-    public string LastName { get; set; }
-
-    [Required]
-    [MaxLength(100)]
-    public string Email { get; set; }
-
-    [MaxLength(15)]
-    public string PhoneNumber { get; set; }
-
-    [MaxLength(10)]
-    public string Gender { get; set; }
-
-    [DataType(DataType.Date)]
-    public DateTime? DateOfBirth { get; set; }
-
-    [DataType(DataType.Date)]
-    public DateTime DateOfJoining { get; set; }
-
-    [MaxLength(200)]
-    public string PermanentAddress { get; set; }
-
-    [MaxLength(200)]
-    public string CurrentAddress { get; set; }
-
-    [MaxLength(12)]
-    public string AadharCard { get; set; }
-
-    [MaxLength(10)]
-    public string PanCard { get; set; }
-
-    [MaxLength(5)]
-    public string BloodGroup { get; set; }
-
-    public bool IsActive { get; set; }
-
-    public string ProfileImageUrl { get; set; }
-
-    // Foreign Keys
-    public int DepartmentId { get; set; }
-
-    public int DesignationId { get; set; }
-
-    // Navigation Properties
-    [ForeignKey("DepartmentId")]
-    public Department Department { get; set; }
-
-    [ForeignKey("DesignationId")]
-    public Designation Designation { get; set; }
-
-    [MaxLength(100)]
-    public string CreatedBy { get; set; }
-
-    public DateTime CreatedAt { get; set; }
-
-    [MaxLength(100)]
-    public string ModifiedBy { get; set; }
-
-    public DateTime? ModifiedAt { get; set; }
+    public int ScEmployeeId { get; set; }
+    public int ScCompanyId { get; set; }
+    public int ScUserId {  get; set; }
+    public string? Title { get; set; }
+    public string? FirstName { get; set; }
+    public string? MiddleName { get; set; }
+    public string? LastName { get; set; }
+    public string? MobilePhone { get; set; }
+    public string? AltMobilePhone { get; set; }
+    public string? HomePhone { get; set; }
+    public string? WorkPhone { get; set; }
+    public string? Address { get; set; }
+    public string? City { get; set; }
+    public string? PostalCode { get; set; }
+    public string? Country { get; set; }
+    public string? Fax { get; set; }
+    public string? Designation { get; set; }
+    public string? State { get; set; }
+    public string? PrimaryEmail { get; set; }
+    public string? AltEmail { get; set; }
+    public DateTime? JoiningDate { get; set; }
+    public string? Gender { get; set; }
+    public long? UpdateHash { get; set; }
+    public DateTime? ConfirmationDate { get; set; }
+    public DateTime? DOB { get; set; }
+    public DateTime? AnniversaryDate { get; set; }
+    public DateTime? LastModifiedDate { get; set; }
+    public int? LastModifiedBy { get; set; }
+    public double? GPSLat { get; set; }
+    public double? GPSLon { get; set; }
+    public string? SpouseTitle { get; set; }
+    public string? SpouseName { get; set; }
+    public string? SpouseMobile { get; set; }
+    public string? SpouseEmail { get; set; }
+    public string? EmergencyContactName { get; set; }
+    public string? EmergencyContactTitle { get; set; }
+    public string? EmergencyContactMobile { get; set; }
+    public string? EmergencyContactEmail { get; set; }
+    public string? BloodGroup { get; set; }
+    public string? OtherNotes { get; set; }
+    public DateTime? ProbationStartDate { get; set; }
+    public DateTime? ProbationEndDate { get; set; }
+    public DateTime? ResignationDate { get; set; }
+    public Int16? GenderId { get; set; }
+    public Int16? TitleId { get; set; }
   }
 }

@@ -34,7 +34,7 @@ namespace HRMSApis.Controllers.v1.Employees
       public async Task<IActionResult> Create(EmployeeDto model)
       {
         var created = await _employeeService.CreateAsync(model);
-        return CreatedAtAction(nameof(GetById), new { id = created.EmployeeId }, created);
+        return CreatedAtAction(nameof(GetById), new { id = created.ScEmployeeId }, created);
       }
 
       [HttpPut("{id}")]

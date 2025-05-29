@@ -1,5 +1,11 @@
 using DataCore;
 using DataServices.Auth;
+using DataServices.IService.IDepartmentServices;
+using DataServices.IService.IDesignationServices;
+using DataServices.IService.IEmployeeServices;
+using DataServices.Service.DepartmentServices;
+using DataServices.Service.DesignationServices;
+using DataServices.Service.EmployeeServices;
 using HRMSApis.Filters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -21,6 +27,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
+
+//HRMS Services
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+builder.Services.AddScoped<IDesignationService, DesignationService>();
 
 // Adding Authentication
 builder.Services.AddAuthentication(options =>
@@ -44,7 +55,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 // Add services to the container.
-builder.Services.AddDbContext<HRMSContext>(opts => opts.UseSqlServer(configuration["ConnectionString:HRMSDB"], d => d.MigrationsAssembly("DataCore")));
+builder.Services.AddDbContext<HRMSContext>(opts => opts.UseSqlServer(configuration["ConnectionString:HRMSDB"]));
 
 builder.Services.AddCors(options =>
 {
