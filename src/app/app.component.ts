@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'HRMSUI';
+
   isSidebarCollapsed = false;
   isPayrollExpanded = false;
   isClaimsExpanded = false;
@@ -14,6 +15,8 @@ export class AppComponent {
 
   toggleSidebar() {
     this.isSidebarCollapsed = !this.isSidebarCollapsed;
+
+    // Collapse all submenus when sidebar is collapsed
     if (this.isSidebarCollapsed) {
       this.isPayrollExpanded = false;
       this.isClaimsExpanded = false;

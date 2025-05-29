@@ -1,122 +1,102 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav
     mode="side"
-    [opened]="true"
+    opened="true"
     [class.collapsed]="isSidebarCollapsed"
     class="sidenav"
   >
-    <!-- Sidebar header with toggle button and HR Panel text -->
     <div class="sidenav-header">
       <button mat-icon-button (click)="toggleSidebar()" matTooltip="Toggle Menu">
         <mat-icon>menu</mat-icon>
       </button>
-      <span *ngIf="!isSidebarCollapsed" class="brand-title">HR Panel</span>
+      <span *ngIf="!isSidebarCollapsed" class="brand-title">HRMS Panel</span>
     </div>
 
-    <!-- Navigation menu -->
-    <mat-nav-list class="mat-nav-list">
+    <mat-nav-list>
 
-      <div>
-        <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link" class="menu-item">
-          <mat-icon class="menu-icon">dashboard</mat-icon>
-          <span *ngIf="!isSidebarCollapsed" class="menu-text">Dashboard</span>
-        </a>
+      <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link" class="menu-item">
+        <mat-icon class="menu-icon">dashboard</mat-icon>
+        <span *ngIf="!isSidebarCollapsed" class="menu-text">Dashboard</span>
+      </a>
+
+      <a mat-list-item routerLink="/attendance" routerLinkActive="active-link" class="menu-item">
+        <mat-icon class="menu-icon">schedule</mat-icon>
+        <span *ngIf="!isSidebarCollapsed" class="menu-text">Attendance</span>
+      </a>
+
+      <a mat-list-item routerLink="/department" routerLinkActive="active-link" class="menu-item">
+        <mat-icon class="menu-icon">apartment</mat-icon>
+        <span *ngIf="!isSidebarCollapsed" class="menu-text">Department</span>
+      </a>
+
+      <a mat-list-item routerLink="/designations" routerLinkActive="active-link" class="menu-item">
+        <mat-icon class="menu-icon">badge</mat-icon>
+        <span *ngIf="!isSidebarCollapsed" class="menu-text">Designations</span>
+      </a>
+
+      <a mat-list-item routerLink="/employee" routerLinkActive="active-link" class="menu-item">
+        <mat-icon class="menu-icon">people</mat-icon>
+        <span *ngIf="!isSidebarCollapsed" class="menu-text">Employees</span>
+      </a>
+
+      <!-- Payroll submenu -->
+      <a mat-list-item class="menu-item" (click)="toggleMenu('payroll')">
+        <mat-icon class="menu-icon">payments</mat-icon>
+        <span *ngIf="!isSidebarCollapsed" class="menu-text">Payroll</span>
+        <mat-icon *ngIf="!isSidebarCollapsed" style="margin-left:auto;">
+          {{ isPayrollExpanded ? 'expand_less' : 'expand_more' }}
+        </mat-icon>
+      </a>
+      <div *ngIf="isPayrollExpanded && !isSidebarCollapsed" class="submenu">
+        <a mat-list-item routerLink="/payroll/employee-salary" class="submenu-item" routerLinkActive="active-link"><h4>Salary</h4></a>
+        <a mat-list-item routerLink="/payroll/payslip" class="submenu-item" routerLinkActive="active-link"><h4>Payslip</h4></a>
+        <a mat-list-item routerLink="/payroll/payroll-items" class="submenu-item" routerLinkActive="active-link"><h4>Payroll Items</h4></a>
       </div>
 
-      <div>
-        <a mat-list-item routerLink="/attendance" routerLinkActive="active-link" class="menu-item">
-          <mat-icon class="menu-icon">schedule</mat-icon>
-          <span *ngIf="!isSidebarCollapsed" class="menu-text">Attendance</span>
-        </a>
+      <!-- Claims submenu -->
+      <a mat-list-item class="menu-item" (click)="toggleMenu('claims')">
+        <mat-icon class="menu-icon">assignment_turned_in</mat-icon>
+        <span *ngIf="!isSidebarCollapsed" class="menu-text">Claims</span>
+        <mat-icon *ngIf="!isSidebarCollapsed" style="margin-left:auto;">
+          {{ isClaimsExpanded ? 'expand_less' : 'expand_more' }}
+        </mat-icon>
+      </a>
+      <div *ngIf="isClaimsExpanded && !isSidebarCollapsed" class="submenu">
+        <a mat-list-item routerLink="/claims/medical" class="submenu-item" routerLinkActive="active-link"><h4>Medical</h4></a>
+        <a mat-list-item routerLink="/claims/travel" class="submenu-item" routerLinkActive="active-link"><h4>Travel</h4></a>
+        <a mat-list-item routerLink="/claims/insurance" class="submenu-item" routerLinkActive="active-link"><h4>Insurance</h4></a>
+        <a mat-list-item routerLink="/claims/other" class="submenu-item" routerLinkActive="active-link"><h4>Other</h4></a>
       </div>
 
-      <div>
-        <a mat-list-item routerLink="/department" routerLinkActive="active-link" class="menu-item">
-          <mat-icon class="menu-icon">apartment</mat-icon>
-          <span *ngIf="!isSidebarCollapsed" class="menu-text">Department</span>
-        </a>
+      <!-- Performance submenu -->
+      <a mat-list-item class="menu-item" (click)="toggleMenu('performance')">
+        <mat-icon class="menu-icon">trending_up</mat-icon>
+        <span *ngIf="!isSidebarCollapsed" class="menu-text">Performance Appraisal</span>
+        <mat-icon *ngIf="!isSidebarCollapsed" style="margin-left:auto;">
+          {{ isPerformanceExpanded ? 'expand_less' : 'expand_more' }}
+        </mat-icon>
+      </a>
+      <div *ngIf="isPerformanceExpanded && !isSidebarCollapsed" class="submenu">
+        <a mat-list-item routerLink="/performance/indicator" class="submenu-item" routerLinkActive="active-link"><h4>Indicator</h4></a>
+        <a mat-list-item routerLink="/performance/review" class="submenu-item" routerLinkActive="active-link"><h4>Review</h4></a>
+        <a mat-list-item routerLink="/performance/appraisal" class="submenu-item" routerLinkActive="active-link"><h4>Appraisal</h4></a>
       </div>
 
-      <div>
-        <a mat-list-item routerLink="/designations" routerLinkActive="active-link" class="menu-item">
-          <mat-icon class="menu-icon">badge</mat-icon>
-          <span *ngIf="!isSidebarCollapsed" class="menu-text">Designations</span>
-        </a>
-      </div>
-
-      <div>
-        <a mat-list-item routerLink="/employee" routerLinkActive="active-link" class="menu-item">
-          <mat-icon class="menu-icon">people</mat-icon>
-          <span *ngIf="!isSidebarCollapsed" class="menu-text">Employees</span>
-        </a>
-      </div>
-
-      <!-- Payroll with Submenu -->
-      <div>
-        <a mat-list-item class="menu-item" (click)="toggleMenu('payroll')">
-          <mat-icon class="menu-icon">payments</mat-icon>
-          <span *ngIf="!isSidebarCollapsed" class="menu-text">Payroll</span>
-          <mat-icon *ngIf="!isSidebarCollapsed" style="margin-left:auto;">
-            {{ isPayrollExpanded ? 'expand_less' : 'expand_more' }}
-          </mat-icon>
-        </a>
-        <div *ngIf="isPayrollExpanded && !isSidebarCollapsed" class="submenu">
-          <a mat-list-item routerLink="/payroll/employee-salary" class="submenu-item" routerLinkActive="active-link"><span class="menu-text"><h4>Salary</h4></span></a>
-          <a mat-list-item routerLink="/payroll/payslip" class="submenu-item" routerLinkActive="active-link"><span class="menu-text"><h4>Payslip</h4></span></a>
-          <a mat-list-item routerLink="/payroll/payroll-items" class="submenu-item" routerLinkActive="active-link"><span class="menu-text"><h4>Payroll Items</h4></span></a>
-        </div>
-      </div>
-
-      <!-- Claims with Submenu -->
-      <div>
-        <a mat-list-item class="menu-item" (click)="toggleMenu('claims')">
-          <mat-icon class="menu-icon">assignment_turned_in</mat-icon>
-          <span *ngIf="!isSidebarCollapsed" class="menu-text">Claims</span>
-          <mat-icon *ngIf="!isSidebarCollapsed" style="margin-left:auto;">
-            {{ isClaimsExpanded ? 'expand_less' : 'expand_more' }}
-          </mat-icon>
-        </a>
-        <div *ngIf="isClaimsExpanded && !isSidebarCollapsed" class="submenu">
-          <a mat-list-item routerLink="/claims/medical" class="submenu-item" routerLinkActive="active-link"><span class="menu-text"><h4>Medical</h4></span></a>
-          <a mat-list-item routerLink="/claims/travel" class="submenu-item" routerLinkActive="active-link"><span class="menu-text"><h4>Travel</h4></span></a>
-          <a mat-list-item routerLink="/claims/insurance" class="submenu-item" routerLinkActive="active-link"><span class="menu-text"><h4>Insurance</h4></span></a>
-          <a mat-list-item routerLink="/claims/other" class="submenu-item" routerLinkActive="active-link"><span class="menu-text"><h4>Other</h4></span></a>
-        </div>
-      </div>
-
-      <!-- Performance Appraisal with Submenu -->
-      <div>
-        <a mat-list-item class="menu-item" (click)="toggleMenu('performance')">
-          <mat-icon class="menu-icon">trending_up</mat-icon>
-          <span *ngIf="!isSidebarCollapsed" class="menu-text">Performance Appraisal</span>
-          <mat-icon *ngIf="!isSidebarCollapsed" style="margin-left:auto;">
-            {{ isPerformanceExpanded ? 'expand_less' : 'expand_more' }}
-          </mat-icon>
-        </a>
-        <div *ngIf="isPerformanceExpanded && !isSidebarCollapsed" class="submenu">
-          <a mat-list-item routerLink="/performance/indicator" class="submenu-item" routerLinkActive="active-link"><span class="menu-text"><h4>Indicator</h4></span></a>
-          <a mat-list-item routerLink="/performance/review" class="submenu-item" routerLinkActive="active-link"><span class="menu-text"><h4>Review</h4></span></a>
-          <a mat-list-item routerLink="/performance/appraisal" class="submenu-item" routerLinkActive="active-link"><span class="menu-text"><h4>Appraisal</h4></span></a>
-          <!-- <a mat-list-item routerLink="/performance/reports" class="submenu-item">Reports</a> -->
-        </div>
-      </div>
-
-      <div>
-        <a mat-list-item routerLink="/broadcast" routerLinkActive="active-link" class="menu-item">
-          <mat-icon class="menu-icon">campaign</mat-icon>
-          <span *ngIf="!isSidebarCollapsed" class="menu-text">Broadcast</span>
-        </a>
-      </div>
+      <a mat-list-item routerLink="/broadcast" routerLinkActive="active-link" class="menu-item">
+        <mat-icon class="menu-icon">campaign</mat-icon>
+        <span *ngIf="!isSidebarCollapsed" class="menu-text">Broadcast</span>
+      </a>
 
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content [ngStyle]="{'margin-left': isSidebarCollapsed ? '80px' : '250px'}">
     <mat-toolbar color="primary">
-      <span>HR Management System</span>
+      <span>{{ title }}</span>
     </mat-toolbar>
 
     <div class="content">
+      <!-- Your routed views appear here -->
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
