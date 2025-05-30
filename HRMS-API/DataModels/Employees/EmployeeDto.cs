@@ -1,3 +1,4 @@
+using DataModels.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -37,8 +38,8 @@ namespace DataModels.Employees
     public DateTime? AnniversaryDate { get; set; }
     public DateTime? LastModifiedDate { get; set; }
     public int? LastModifiedBy { get; set; }
-    public double? GPSLat { get; set; }
-    public double? GPSLon { get; set; }
+    public decimal? GPSLat { get; set; }
+    public decimal? GPSLon { get; set; }
     public string? SpouseTitle { get; set; }
     public string? SpouseName { get; set; }
     public string? SpouseMobile { get; set; }
@@ -54,5 +55,6 @@ namespace DataModels.Employees
     public DateTime? ResignationDate { get; set; }
     public Int16? GenderId { get; set; }
     public Int16? TitleId { get; set; }
+    public virtual UserDto Users { get; set; }
   }
 }

@@ -1,20 +1,16 @@
 using DataCore;
 using DataServices.Auth;
-using DataServices.IService.IDepartmentServices;
-using DataServices.IService.IDesignationServices;
+using DataServices.IService.ICompanyBranchServices;
 using DataServices.IService.IEmployeeServices;
-using DataServices.Service.DepartmentServices;
-using DataServices.Service.DesignationServices;
+using DataServices.Service.CompanyBranchService;
 using DataServices.Service.EmployeeServices;
 using HRMSApis.Filters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
 using Shared.Contexts.Base;
-using System.Reflection;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,8 +26,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 
 //HRMS Services
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
-builder.Services.AddScoped<IDepartmentService, DepartmentService>();
-builder.Services.AddScoped<IDesignationService, DesignationService>();
+builder.Services.AddScoped<ICompanyBranchService, CompanyBranchService>();
 
 // Adding Authentication
 builder.Services.AddAuthentication(options =>

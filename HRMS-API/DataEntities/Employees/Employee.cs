@@ -1,6 +1,4 @@
-using DataEntities.Departments;
-using DataEntities.Designations;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using DataEntities.Users;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -37,8 +35,8 @@ namespace DataEntities.Employees
     public DateTime? AnniversaryDate { get; set; }
     public DateTime? LastModifiedDate { get; set; }
     public int? LastModifiedBy { get; set; }
-    public double? GPSLat { get; set; }
-    public double? GPSLon { get; set; }
+    public decimal? GPSLat { get; set; }
+    public decimal? GPSLon { get; set; }
     public string? SpouseTitle { get; set; }
     public string? SpouseName { get; set; }
     public string? SpouseMobile { get; set; }
@@ -54,5 +52,9 @@ namespace DataEntities.Employees
     public DateTime? ResignationDate { get; set; }
     public Int16? GenderId { get; set; }
     public Int16? TitleId { get; set; }
+
+    [ForeignKey("ScUserId")]
+    public virtual User Users { get; set; }
+
   }
 }

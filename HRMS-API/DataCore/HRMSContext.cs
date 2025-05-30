@@ -1,6 +1,6 @@
-using DataEntities.Departments;
-using DataEntities.Designations;
+using DataEntities.Company;
 using DataEntities.Employees;
+using DataEntities.Users;
 using Microsoft.EntityFrameworkCore;
 namespace DataCore
 {
@@ -11,8 +11,9 @@ namespace DataCore
         {
         }
     public DbSet<Employee> ScEmployee { get; set; }
-    public DbSet<Designation> Designations { get; set; }
-    public DbSet<Department> Departments { get; set; }
+    public DbSet<User> ScUser { get; set; }
+    public DbSet<CompanyBranch> ScCompanyBranches { get; set; }
+    public DbSet<Company> ScCompany { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
         }

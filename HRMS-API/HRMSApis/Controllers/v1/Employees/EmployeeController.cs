@@ -29,28 +29,5 @@ namespace HRMSApis.Controllers.v1.Employees
         if (employee == null) return NotFound();
         return Ok(employee);
       }
-
-      [HttpPost]
-      public async Task<IActionResult> Create(EmployeeDto model)
-      {
-        var created = await _employeeService.CreateAsync(model);
-        return CreatedAtAction(nameof(GetById), new { id = created.ScEmployeeId }, created);
-      }
-
-      [HttpPut("{id}")]
-      public async Task<IActionResult> Update(int id, EmployeeDto model)
-      {
-        var updated = await _employeeService.UpdateAsync(id, model);
-        if (updated == null) return NotFound();
-        return Ok(updated);
-      }
-
-      [HttpDelete("{id}")]
-      public async Task<IActionResult> Delete(int id)
-      {
-        var result = await _employeeService.DeleteAsync(id);
-        if (!result) return NotFound();
-        return NoContent();
-      }
     }
 }
