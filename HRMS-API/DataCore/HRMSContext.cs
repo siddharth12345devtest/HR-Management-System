@@ -14,6 +14,7 @@ namespace DataCore
     public DbSet<User> ScUser { get; set; }
     public DbSet<CompanyBranch> ScCompanyBranches { get; set; }
     public DbSet<Company> ScCompany { get; set; }
+    public DbSet<CompanyContact> ScCompanyContacts { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
         }

@@ -1,8 +1,10 @@
 using DataCore;
 using DataServices.Auth;
 using DataServices.IService.ICompanyBranchServices;
+using DataServices.IService.ICompanyContactServices;
 using DataServices.IService.IEmployeeServices;
-using DataServices.Service.CompanyBranchService;
+using DataServices.Service.CompanyBranchServices;
+using DataServices.Service.CompanyContactServices;
 using DataServices.Service.EmployeeServices;
 using HRMSApis.Filters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -27,6 +29,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 //HRMS Services
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<ICompanyBranchService, CompanyBranchService>();
+builder.Services.AddScoped<ICompanyContactService, CompanyContactService>();
 
 // Adding Authentication
 builder.Services.AddAuthentication(options =>

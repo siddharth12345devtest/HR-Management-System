@@ -4,7 +4,7 @@ using DataModels.Employees;
 using DataServices.IService.ICompanyBranchServices;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataServices.Service.CompanyBranchService
+namespace DataServices.Service.CompanyBranchServices
 {
   public class CompanyBranchService : ICompanyBranchService
   {
