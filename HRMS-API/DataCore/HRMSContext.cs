@@ -1,5 +1,6 @@
-using DataEntities.Company;
+using DataEntities.Companies;
 using DataEntities.Employees;
+using DataEntities.UserAttendance;
 using DataEntities.Users;
 using Microsoft.EntityFrameworkCore;
 namespace DataCore
@@ -15,6 +16,8 @@ namespace DataCore
     public DbSet<CompanyBranch> ScCompanyBranches { get; set; }
     public DbSet<Company> ScCompany { get; set; }
     public DbSet<CompanyContact> ScCompanyContacts { get; set; }
+
+    public DbSet<UserAttendance> ScUserAttendance { get; set; }  
     protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
         }

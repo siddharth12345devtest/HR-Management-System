@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace DataEntities.Company
+namespace DataEntities.Companies
 {
   public class Company
   {
