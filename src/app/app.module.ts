@@ -29,7 +29,7 @@ import { AppraisalComponent } from './components/performance-appraisal/appraisal
 import { EmployeeSalaryComponent } from './components/payroll/employee-salary/employee-salary.component';
 import { PayslipComponent } from './components/payroll/payslip/payslip.component';
 import { PayrollItemsComponent } from './components/payroll/payroll-items/payroll-items.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -52,6 +52,7 @@ import { PayrollItemsComponent } from './components/payroll/payroll-items/payrol
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,MatSidenavModule,
     MatToolbarModule,
     MatListModule,
