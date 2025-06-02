@@ -119,68 +119,24 @@
         <table class="table table-bordered table-hover align-middle text-center">
           <thead class="table-light">
             <tr>
-              <th>Date</th>
-              <th>Check In</th>
-              <th>Status</th>
-              <th>Check Out</th>
-              <th>Break</th>
-              <th>Late</th>
-              <th>Overtime</th>
-              <th>Production Hours</th>
+              <th>Attendance Id</th>
+              <th>User Id</th>
+              <th>Login Time</th>
+              <th>Logout Time</th>
+              <th>Duration Minutes</th>
+              <th>Company Id</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>02 Sep 2024</td>
-              <td>09:00 AM</td>
-              <td><span class="status-badge status-present">● Present</span></td>
-              <td>09:17 PM</td>
-              <td>14 Min</td>
-              <td>12 Min</td>
-              <td>-</td>
-              <td><span class="production-hours prod-green">8.35 Hrs</span></td>
-            </tr>
-            <tr>
-              <td>06 Jul 2024</td>
-              <td>09:00 AM</td>
-              <td><span class="status-badge status-present">● Present</span></td>
-              <td>07:13 PM</td>
-              <td>32 Min</td>
-              <td>-</td>
-              <td>-</td>
-              <td><span class="production-hours prod-blue">9.15 Hrs</span></td>
-            </tr>
-            <tr>
-              <td>10 Dec 2024</td>
-              <td>09:00 AM</td>
-              <td><span class="status-badge status-absent">● Absent</span></td>
-              <td>09:23 PM</td>
-              <td>10 Min</td>
-              <td>-</td>
-              <td>45 Min</td>
-              <td><span class="production-hours prod-green">9.25 Hrs</span></td>
-            </tr>
-            <tr>
-              <td>12 Apr 2024</td>
-              <td>09:00 AM</td>
-              <td><span class="status-badge status-present">● Present</span></td>
-              <td>06:43 PM</td>
-              <td>23 Min</td>
-              <td>10 Min</td>
-              <td>10 Min</td>
-              <td><span class="production-hours prod-green">8.22 Hrs</span></td>
-            </tr>
-            <tr>
-              <td>14 Jan 2024</td>
-              <td>09:00 AM</td>
-              <td><span class="status-badge status-present">● Present</span></td>
-              <td>06:45 PM</td>
-              <td>30 Min</td>
-              <td>32 Min</td>
-              <td>20 Min</td>
-              <td><span class="production-hours prod-green">8.55 Hrs</span></td>
-            </tr>
-          </tbody>
+                  <tbody>
+          <tr *ngFor="let a of attendances">
+            <td>{{ a.attendanceId }}</td>
+            <td>{{ a.scUserId }}</td>
+            <td>{{ a.loginTime | date: 'shortTime' }}</td>
+            <td>{{ a.logoutTime | date: 'shortTime' }}</td>
+            <td>{{ a.durationMinutes }}</td>
+            <td>{{ a.scCompanyId }}</td>
+          </tr>
+        </tbody>
         </table>
       </div>
     </div>
